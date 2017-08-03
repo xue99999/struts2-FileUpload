@@ -9,10 +9,10 @@
 
     <package name="shiyanlou.struts" namespace="/" extends="struts-default">
 
-        <action name="hello" class="shiyanlou.struts.UploadAction" method="execute">
+        <action name="upload" class="shiyanlou.struts.UploadAction" method="execute">
         	<param name="savePath">/uploadFiles</param>
-            <result name="success">/Hello.jsp</result>
-            <result name="error">/Error.jsp</result>
+            <result name="success">/success.jsp</result>
+            <result name="error">/error.jsp</result>
         </action>
     </package>
 
