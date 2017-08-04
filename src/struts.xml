@@ -14,6 +14,22 @@
             <result name="success">/success.jsp</result>
             <result name="error">/error.jsp</result>
         </action>
+        
+        <action name="multiUpload" class="shiyanlou.struts.MultiUploadAction" method="execute">
+        	
+        	<interceptor-ref name="fileUpload">
+        		<param name="allowedTypes">text/plain, image/png, image/gif, image/jpeg</param>
+        		
+        		<param name="maximumSize">20480</param>
+        	</interceptor-ref>
+        	
+        	<interceptor-ref name="defaultStack"></interceptor-ref>
+        	
+        	<param name="savePath">/uploadMultiFiles</param>
+            <result name="success">/success.jsp</result>
+            <result name="error">/error.jsp</result>
+            <result name="input">/index.jsp</result>
+        </action>
     </package>
 
 </struts>

@@ -16,11 +16,22 @@
 				+path+"/";  
 	%>
 	
-	upload succeed! <br>
-	uploader:<s:property value=" + uploader"/><br/>
-	file name:<s:property value="+ uploadFileName"/><br/>
-	file type:<s:property value="+ uploadContentType"/><br/>
-	file address:<p> <%=basePath %><s:property value="'uploadFiles/'   
-	    + uploadFileName"/></p><br/> 
+	<h1>upload succeed! </h1> <br>
+	
+	
+	file name:<s:property value="+ uploadsFileName[0]"/><br/>
+	file type:<s:property value="+ uploadsContentType[0]"/><br/>
+	file address:<p> <%=basePath %><s:property value="'uploadMultiFiles/'   
+	    + uploadFileName[0]"/></p><br/> 
+	    
+	file name:<s:property value="+ uploadsFileName[1]"/><br/>
+	file type:<s:property value="+ uploadsContentType[1]"/><br/>
+	file address:<p> <%=basePath %><s:property value="'uploadMultiFiles/'   
+	    + uploadFileName[1]"/></p><br/> 
+	    
+	file name:<s:property value="+ uploadsFileName[2]"/><br/>
+	file type:<s:property value="+ uploadsContentType[2]"/><br/>
+	file address:<p> <%=basePath %><s:property value="'uploadMultiFiles/'   
+	    + uploadFileName[2]"/></p><br/> 
 </body>
 </html>
