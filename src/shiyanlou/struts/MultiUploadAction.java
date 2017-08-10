@@ -3,6 +3,7 @@ package shiyanlou.struts;
 import java.io.File;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.struts2.ServletActionContext;
 
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
@@ -20,8 +21,9 @@ public class MultiUploadAction extends ActionSupport {
 	private String savePath;
 	
 	public String execute() throws Exception {
-		String realpath = getSavePath();
-		
+		//上传和下载需要这个路径一样
+		String realpath = ServletActionContext.getServletContext().getRealPath(getSavePath());
+				
 		if (uploads != null) {
 			File savepath = new File(realpath);
 			
